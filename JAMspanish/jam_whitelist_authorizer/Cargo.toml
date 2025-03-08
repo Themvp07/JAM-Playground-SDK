@@ -1,0 +1,9 @@
+[package]
+name = "jam_whitelist_authorizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+jam-types = "0.1.12"         # Versión sugerida en la documentación
+jam-pvm-builder = "0.1.12"   # Versión sugerida en la documentación
+serde = "1.0.218"
