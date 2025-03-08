@@ -71,6 +71,7 @@ El SDK de JAM proporciona varias herramientas y estructuras clave que se utiliza
 - **Uso en el proyecto**:
   - Se utiliza para compilar el autorizador personalizado en un blob PVM que pueda ser desplegado en el entorno de JAM.
 
+Enlace principal de recursos del JAM SDK: https://hackmd.io/@polkadot/jamsdk
 ---
 
 ## **Requisitos del Sistema**
