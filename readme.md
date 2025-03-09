@@ -19,8 +19,6 @@ The project is modular and extensible, allowing you to add new questions, roles,
 
 ## **JAM SDK Components**
 
-## **JAM SDK Components**
-
 The JAM SDK provides several key tools and structures that are used in this project. Below is a description of how these components are integrated into the current code, along with suggestions for additional functionalities that could be implemented in the future::
 
 ### **1. `jam-types` (Implemented)**
