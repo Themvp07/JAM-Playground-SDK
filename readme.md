@@ -1,4 +1,4 @@
-# **JAM Whitelist Authorizer**
+# **JAM Whitelist Roole Authorizer**
 
 This project implements a **role-based whitelist authorizer** using the JAM SDK (https://hackmd.io/@polkadot/jamsdk). It allows managing authorized addresses, user roles (admin, participant, observer), and **includes an interactive game** where participants answer questions. The results are supervised by observers and administrators.
 
