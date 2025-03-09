@@ -33,9 +33,9 @@ El proyecto está diseñado para ser modular y fácil de extender, permitiendo a
 
 ## **Componentes del SDK de JAM**
 
-El SDK de JAM proporciona varias herramientas y estructuras clave que se utilizan en este proyecto. A continuación, se describe cada componente y cómo se integra en el código:
+El SDK de JAM proporciona varias herramientas y estructuras clave que se utilizan en este proyecto. A continuación, se describe cómo se integran estos componentes en el código actual y se incluyen sugerencias para funcionalidades adicionales que podrían implementarse en el futuro:
 
-### **1. `jam-types`**
+### **1. `jam-types (Implementado)`**
 - **Descripción**: Este crate contiene tipos básicos y estructuras necesarias para trabajar con servicios y autorizadores en JAM.
 - **Componentes utilizados**:
   - **`Authorizer`**: Representa el autorizador del sistema JAM. Contiene dos campos principales:
@@ -48,28 +48,30 @@ El SDK de JAM proporciona varias herramientas y estructuras clave que se utiliza
   - Se genera dinámicamente un `CodeHash` basado en el nombre del administrador y se utiliza para verificar la autenticidad de las operaciones.
   - Se extiende `AuthParam` con la dirección del administrador para rastrear quién realizó ciertas acciones.
 
-### **2. `jam-pvm-common`**
-- **Descripción**: Proporciona funcionalidades comunes para trabajar con el PVM (Parity Virtual Machine).
-- **Componentes utilizados**:
-  - **Funciones de serialización/deserialización**: Utilizadas para manejar datos en el formato requerido por el PVM.
-  - **Estructuras de datos compartidas**: Facilitan la interoperabilidad entre diferentes módulos del SDK.
-- **Uso en el proyecto**:
-  - Se utiliza para asegurar que los datos generados por el autorizador sean compatibles con el entorno de ejecución del PVM.
+### **2. `jam-pvm-common (revisado para futura implementación)`**
+- **Descripción**: Proporciona funcionalidades comunes para trabajar con el PVM.
+- **Uso actual**:
+  - No se está utilizando explícitamente en el código actual.
+  - **Sugerencia para el futuro**: Podría usarse para asegurar que los datos generados por el autorizador sean compatibles con el entorno de ejecución del PVM. Por ejemplo, podrías implementar funciones de serialización/deserialización específicas para manejar datos en el formato requerido por el PVM.
 
-### **3. `jam-bootstrap-service`**
+
+### **3. `jam-bootstrap-service (revisado, usado como referencia)`**
 - **Descripción**: Un servicio básico útil para crear configuraciones iniciales (genesis) en JAM.
 - **Uso en el proyecto**:
   - Se clona como referencia para comprender cómo configurar un servicio básico en JAM.
+  - **Sugerencia para el futuro**: Podría usarse para definir una configuración inicial que incluya direcciones predefinidas para el administrador, participante y observador.
 
-### **4. `jam-null-authorizer`**
+### **4. `jam-null-authorizer (Usado como punto de partida, pero no está presente en el código actual)`**
 - **Descripción**: Un autorizador básico que permite realizar pruebas sin restricciones de autorización.
-- **Uso en el proyecto**:
-  - Se utiliza como punto de partida para implementar el autorizador personalizado (`RoleBasedWhitelistAuthorizer`).
+- **Uso actual**:
+  - No se está utilizando explícitamente en el código actual.
+  - **Sugerencia para el futuro**: Podría usarse como punto de partida para implementar casos de prueba más avanzados. Por ejemplo, podría integrarse para probar escenarios donde no se requiere autorización.
 
-### **5. `jam-pvm-build`**
+### **5. `jam-pvm-build (revisado pero no este disponible publicamente)`**
 - **Descripción**: Una herramienta CLI que permite construir blobs de código PVM para servicios o autorizadores.
-- **Uso en el proyecto**:
-  - Se utiliza para compilar el autorizador personalizado en un blob PVM que pueda ser desplegado en el entorno de JAM.
+- **Uso actual**:
+  - No se está utilizando explícitamente en el código actual.
+  - **Sugerencia para el futuro**: Podría usarse para compilar el autorizador personalizado en un blob PVM desplegable.
 
 Enlace principal de recursos del JAM SDK: https://hackmd.io/@polkadot/jamsdk
 ---
