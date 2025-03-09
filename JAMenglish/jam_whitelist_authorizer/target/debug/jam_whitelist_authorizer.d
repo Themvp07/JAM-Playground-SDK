@@ -1,0 +1,1 @@
+C:\Users\Saimon..!\Documents\Dotsama\JAM\jam_whitelist_authorizer\target\debug\jam_whitelist_authorizer.exe: C:\Users\Saimon..!\Documents\Dotsama\JAM\jam_whitelist_authorizer\src\lib.rs C:\Users\Saimon..!\Documents\Dotsama\JAM\jam_whitelist_authorizer\src\main.rs C:\Users\Saimon..!\Documents\Dotsama\JAM\jam_whitelist_authorizer\src\questions.rs
